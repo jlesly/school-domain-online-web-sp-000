@@ -1,13 +1,24 @@
 # code here!
 
-class School 
-  def initialize(school)
-    @school = school 
+class School
+	attr_accessor :roster, :name, :grade 
+	attr_reader :school 
+	
+	def initialize(school)
+    @school = school
+  end
+  
+  def roster
+  	roster = {}
+  end 
+  
+  def add_student(name,grade)
+  	roster[grade] = []
+  	roster[grade] << name
+  		
+  end
 
-school = School.new("Bayside High School")
+end
 
-school.roster
 
-school.add_student("Zach Morris", 9)
-school.roster 
-
+School.new("R").roster.add_student("john",9)
