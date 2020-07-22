@@ -20,5 +20,3 @@ class School
 
 end
 
-
-School.new("R").roster.add_student("john",9)
